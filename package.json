@@ -1,0 +1,41 @@
+{
+  "name": "dploy-mcp",
+  "version": "0.1.0",
+  "description": "MCP server that deploys to your VPS via SSH using plain English. Give Claude Code / Cursor an IP and a key, tell it what to deploy.",
+  "type": "module",
+  "main": "build/index.js",
+  "bin": {
+    "dploy-mcp": "./build/index.js"
+  },
+  "files": [
+    "build"
+  ],
+  "scripts": {
+    "build": "tsc && chmod 755 build/index.js",
+    "watch": "tsc --watch",
+    "inspector": "npm run build && npx @modelcontextprotocol/inspector node build/index.js",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [
+    "mcp",
+    "ssh",
+    "deploy",
+    "vps",
+    "claude",
+    "claude-code",
+    "cursor",
+    "devops"
+  ],
+  "author": "wellmb",
+  "license": "MIT",
+  "dependencies": {
+    "@modelcontextprotocol/sdk": "^1.29.0",
+    "ssh2": "^1.17.0",
+    "zod": "^3.25.76"
+  },
+  "devDependencies": {
+    "@types/node": "^26.0.1",
+    "@types/ssh2": "^1.15.5",
+    "typescript": "^6.0.3"
+  }
+}
