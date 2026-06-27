@@ -54,8 +54,8 @@ run before approving anything destructive.
 ## Install
 
 ```bash
-git clone https://github.com/wellmb/dploy-mcp.git
-cd dploy-mcp
+git clone https://github.com/wellmb/DPloy.git
+cd DPloy
 npm install
 npm run build
 ```
@@ -63,7 +63,7 @@ npm run build
 ### Claude Code
 
 ```bash
-claude mcp add --transport stdio dploy -- node /absolute/path/to/dploy-mcp/build/index.js
+claude mcp add --transport stdio dploy -- node /absolute/path/to/DPloy/build/index.js
 ```
 
 ### Cursor
@@ -75,7 +75,7 @@ Add to `~/.cursor/mcp.json` (or your project's `.cursor/mcp.json`):
   "mcpServers": {
     "dploy": {
       "command": "node",
-      "args": ["/absolute/path/to/dploy-mcp/build/index.js"]
+      "args": ["/absolute/path/to/DPloy/build/index.js"]
     }
   }
 }
